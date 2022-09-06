@@ -26,6 +26,8 @@ jobs:
         run: npm run eslint
       - name: test
         run: npm test
+      - name: Discord Webhook Notify
+        uses: rjstone/discord-webhook-notify@v1.0.4
   build_app:
     if: ${{ !contains(github.event.commits.*.message, '#skip')}}
     runs-on: ubuntu-20.04
